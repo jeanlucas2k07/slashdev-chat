@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>/dev/chat - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/images/icons/slashdev.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  </head>
+  
+<body>
+<h1>Welcome to /dev/chat</h1>
+
+<form>
+        <img src="/assets/images/logos/slashdev.png" alt="" class="devchat">
+
+        <input type="text" name="email" id="email" placeholder="your email or phone number...">
+
+        <input type="text" name="password" id="password" placeholder="your password...">
+
+        <div class="rpassword"><p>Forgot your password? <a href="">Click here!</a></p></div>
+
+        <div class="checkbox">
+            <input type="checkbox" name="eye" id="eye">
+            <label for="eye">show password</label>  
+        </div>
+
+        <div class="submit-button">
+            <input type="submit" value="Login">
+        </div>
+
+
+        <div class="social-login">
+            <p>or continue with</p>
+            <div style="display: flex; justify-content: center;" >
+                <button id="login-google" class="firebase-auth" type="button"><img src="/assets/images/logos/logo-google.png" alt="logo google"></button>
+                <button id="login-git" class="firebase-auth" type="button"><img src="/assets/images/logos/github-logo.png" alt="logo github"></button>
+            </div>
+
+        <p class="siginup">don't have an account? <a href="">Click here</a> and sigin Up!</p>
+    
+        </div>
+</form>
+
+
+<!-- Onde ficarão as informações do usuário. -->
+<div id="user"></div>
+
+
+<!-- Para rodar o js -->
+<script type="module" src="./script.js"></script>
+</body>
+</html>
