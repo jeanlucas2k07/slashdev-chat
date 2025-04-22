@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>./dev/chat - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <title>./dev/chat - Register</title>
 </head>
 <body>
+    <h1 id="title"><span><span style="color: rgb(54, 54, 120);">~</span>$</span> Welcome to ./dev/chat<span id="cursor">_</span></h1>
+
     <form >
-        <input type="text" placeholder="email" id="e">
-        <input type="text" placeholder="senha" id="s">
-        <input type="submit" placeholder="cadastrar" id="btn">
+        <img src="./assets/images/logos/slashdev.png" alt="">
+
+        <input type="text" placeholder="your email..." id="e">
+        <input type="password" placeholder="your password..." id="s">
+        <input type="password" placeholder="confirm your password..." id="cs">
+
+        <div class="checkbox">
+            <input type="checkbox" name="eye" id="eye">
+            <label for="eye">show password</label>  
+        </div>
+
+        <input type="submit" id="btn" value="sigin Up">
+        
+        <div class="social-login">
+            <p>or continue with</p>
+            <div style="display: flex; justify-content: center;" >
+                <button id="login-git" class="firebase-auth" type="button"><img src="/assets/images/logos/github-logo.png" alt="logo github"></button>
+                <button id="login-google" class="firebase-auth" type="button"><img src="/assets/images/logos/logo-google.png" alt="logo google"></button>
+            </div>
+
+
+        <p class="siginup">Already have an account? <a href="/">Log in here!</a> and flex your brain!</p>
     </form>
 
     <script type="module" src="./cadastro.js"></script>

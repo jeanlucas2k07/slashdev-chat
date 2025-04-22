@@ -47,7 +47,6 @@ loginGithub.addEventListener("click", async () => {
     }
   });
 
-
 submitButton.addEventListener("click", function (event) {
   try{
 
@@ -68,6 +67,18 @@ submitButton.addEventListener("click", function (event) {
 
   } catch(error){
     console.log("Erro ao capturar as informações de email e senha:", error)
+
   };
 
 });
+
+
+document.getElementById("eye").addEventListener('change', function () {
+  const passwordField = document.getElementById('password');
+
+  if (this.checked) {
+    passwordField.type = 'text'
+  } else{
+    passwordField.type = 'password'
+  }
+})
