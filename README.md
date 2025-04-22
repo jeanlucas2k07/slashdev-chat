@@ -22,7 +22,7 @@ O Firebase exige que o domínio onde o app roda esteja registrado nas autorizaç
 
     Login com:
 
-        Email/Senha // ainda não finalizado
+        Email/Senha
 
         Google
 
