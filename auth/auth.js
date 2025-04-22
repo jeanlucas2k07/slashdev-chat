@@ -1,7 +1,14 @@
-import { signInWithPopup, getAuth, GithubAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+// auth.js
+import {
+  signInWithPopup,
+  getAuth,
+  GithubAuthProvider,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 const provider = new GithubAuthProvider();
 
+// Login com GitHub
 export async function githubAuth() {
   const auth = getAuth();
 
@@ -21,8 +28,29 @@ export async function githubAuth() {
   }
 }
 
+// Login com Google
 export async function googleAuth(auth, provider) {
-    const result = await signInWithPopup(auth, provider)
+  try {
+    const result = await signInWithPopup(auth, provider);
+    return result.user;
+  } catch (error) {
+    console.error("Erro no login com Google:", error);
+    return null;
+  }
+}
 
-    return result.user
+// Login com email e senha
+export async function loginEmailAndPassword(email, password) {
+  const auth = getAuth();
+
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    window.alert(`Bem-vindo, ${user.email}`);
+    return user;
+  } catch (error) {
+    console.error("Erro no login com email e senha:", error.code, error.message);
+    window.alert("Email ou senha incorretos.");
+    return null;
+  }
 }

@@ -1,9 +1,11 @@
 import { auth, providerGoogle } from "./firebase-config.js";
-import { githubAuth, googleAuth} from "./auth/auth.js"
+import { githubAuth, googleAuth, loginEmailAndPassword} from "./auth/auth.js"
 
 const loginGoolge = document.getElementById("login-google"); // "document.getElementById()" -> já é bem auto-explicativo, pega um elemento do documento HTML pelo id.
 
 const loginGithub = document.getElementById("login-git")
+
+const submitButton = document.getElementById("submit-button")
 
 const userDiv = document.getElementById("user"); // Basicamente, a mesma coisa do de cima
 
@@ -45,3 +47,20 @@ loginGithub.addEventListener("click", async () => {
     }
   });
 
+
+submitButton.addEventListener("click", function (event) {
+  try{
+
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+  
+    console.log(email, password);
+
+    loginEmailAndPassword(email, password)
+
+  } catch(error){
+    console.log("Erro ao capturar as informações de email e senha:", error)
+  }
+})
