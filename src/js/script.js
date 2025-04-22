@@ -1,5 +1,7 @@
 import { auth, providerGoogle } from "./firebase-config.js";
-import { githubAuth, googleAuth, loginEmailAndPassword} from "./auth/auth.js"
+import { githubAuth, googleAuth, loginEmailAndPassword} from "../../auth/auth.js"
+
+console.log("Script chamado!!!!!!!!!!!!!")
 
 const loginGoolge = document.getElementById("login-google"); // "document.getElementById()" -> já é bem auto-explicativo, pega um elemento do documento HTML pelo id.
 
