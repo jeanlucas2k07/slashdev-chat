@@ -56,11 +56,18 @@ submitButton.addEventListener("click", function (event) {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
   
-    console.log(email, password);
+    if (!email || !password){
+      window.alert("As entradas de email ou senha estão vazias")
+      return null
+    }else{
+      console.log("Email:", email)
+      console.log("Senha:", password)
 
-    loginEmailAndPassword(email, password)
+      loginEmailAndPassword(email, password)
+    };
 
   } catch(error){
     console.log("Erro ao capturar as informações de email e senha:", error)
-  }
-})
+  };
+
+});

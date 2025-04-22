@@ -91,19 +91,52 @@
     font-size: 15px;
   }
 
-  form a {
-    color: hsl(303, 67%, 50%);
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #7f8692;
   }
 
-  input[type=checkbox]{
+  .checkbox label {
     cursor: pointer;
+
+  }
+  
+  .checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #6272a4; /* cor do tema Dracula */
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
   }
 
-  form label {
+  .checkbox input[type=checkbox]:hover{
+    background-color: #9500ff;
+    border-color: #9500ff;
+  }
+
+  .checkbox input[type=checkbox]:checked{
+    background-color:#7700cb;
+    border-color: #7700cb;
+  }
+
+  .checkbox input[type=checkbox]:checked::before{
+    content: "✔";
+    color: #f8f8f2;
     font-size: 15px;
-    color: #878787;
-    cursor: pointer;
+    position: absolute;
+    left: 2px;
+    top: -2px;
   }
+  
 
   .submit-button{
     display: flex;
@@ -112,7 +145,7 @@
   }
 
   input[type=submit]{
-    background-color: #1f6feb;
+    background-color:#9500ff;
     color: azure;
     height: 40px;
     width: 400px;
@@ -122,10 +155,11 @@
     border: none;
     font-weight: 600;
     font-size: 15px;
+    font-family: monospace;
   }
 
   input[type=submit]:hover{
-    background-color: #1d5dbc;
+    background-color:#7700cb;
   }
 
   .social-login{
