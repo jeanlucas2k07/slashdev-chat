@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>./dev/chat - Login</title>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
     <link rel="shortcut icon" href="./assets/images/icons/slashdev.ico">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   </head>
@@ -15,7 +15,7 @@
             <img src="/assets/images/logos/slashdev.png" alt="" class="devchat">
 
             <div class="entries">
-                <input type="text" name="email" id="email" placeholder="your email or phone number...">
+                <input type="email" name="email" id="email" placeholder="your email or phone number...">
 
                 <input type="password" name="password" id="password" placeholder="your password...">
             </div>
@@ -45,11 +45,10 @@
     </form>
 
 
-    <!-- Onde ficarão as informações do usuário. -->
     <div id="user"></div>
 
 
-    <!-- Para rodar o js -->
     <script type="module" src="/src/js/script.js"></script>
+    <script type="module" src="/src/js/global.js"></script>
 </body>
 </html>

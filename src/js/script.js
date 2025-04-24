@@ -29,6 +29,8 @@ loginGoolge.addEventListener("click", async () => {
 
     window.alert(`ID Token: ${idToken}`)
 
+    window.location.href = "home.html"
+
   } catch (error) {
     console.error("Erro ao logar:", error.message);
   } // a excessão
