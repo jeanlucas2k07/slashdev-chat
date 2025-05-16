@@ -30,15 +30,15 @@ http://127.0.0.1:5500/
     Após criar o projeto, clique em Adicionar app > Web.
 
     Dê um nome ao app (ex: devchat-web) e copie a configuração Firebase que será exibida, como abaixo:
-
-const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_DOMÍNIO.firebaseapp.com",
-  projectId: "SEU_PROJECT_ID",
-  storageBucket: "SEU_BUCKET.appspot.com",
-  messagingSenderId: "SEU_MESSAGING_ID",
-  appId: "SEU_APP_ID"
-};
+    
+        const firebaseConfig = {
+          apiKey: "SUA_API_KEY",
+          authDomain: "SEU_DOMÍNIO.firebaseapp.com",
+          projectId: "SEU_PROJECT_ID",
+          storageBucket: "SEU_BUCKET.appspot.com",
+          messagingSenderId: "SEU_MESSAGING_ID",
+          appId: "SEU_APP_ID"
+        };
 
     Substitua essa configuração no arquivo JavaScript do projeto onde está o firebaseConfig.
 
